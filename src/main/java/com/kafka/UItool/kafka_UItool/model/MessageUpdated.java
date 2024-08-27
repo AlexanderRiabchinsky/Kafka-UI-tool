@@ -5,9 +5,6 @@ import lombok.*;
 
 @Data
 @Entity
-@Getter
-@Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "messages_updated")

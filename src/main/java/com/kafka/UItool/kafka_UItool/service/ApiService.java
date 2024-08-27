@@ -7,10 +7,11 @@ import com.kafka.UItool.kafka_UItool.model.MessageUpdated;
 import com.kafka.UItool.kafka_UItool.repository.MessagesPostRepository;
 import com.kafka.UItool.kafka_UItool.repository.MessagesUpdatedRepository;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ApiService {
     private final MessagesUpdatedRepository messagesUpdatedRepository;
     private final MessagesPostRepository messagesPostRepository;

@@ -5,6 +5,7 @@ import com.kafka.UItool.kafka_UItool.exeption.EmptyFieldException;
 import com.kafka.UItool.kafka_UItool.model.MessagePost;
 import com.kafka.UItool.kafka_UItool.model.MessageUpdated;
 import com.kafka.UItool.kafka_UItool.service.ApiService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,12 +14,10 @@ import java.io.IOException;
 import java.util.Optional;
 
 @RestController
+@RequiredArgsConstructor
 public class ApiController {
     private final ApiService apiService;
 
-    public ApiController(ApiService apiService) {
-        this.apiService = apiService;
-    }
 
     @PostMapping("/api/message")
     public ResponseEntity<Response> postMessage(@RequestBody MessagePost messagePost) throws IOException {
